@@ -23,7 +23,10 @@ def player_input():
 
 # Step 3: Write a function that takes in the board list object, a marker ('X' or 'O'), and a desired position (number 1-9) and assigns it to the board.
 def place_marker(board, marker, position):
-  pass
+  for i, x in enumerate(board):
+    if i == position:
+      board[i] = marker
+  return board
 
 # Step 4: Write a function that takes in a board and a mark (X or O) and then checks to see if that mark has won.
 def win_check(board, mark):
